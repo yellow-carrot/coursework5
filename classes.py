@@ -14,7 +14,7 @@ class UnitClass:
 
 
 WarriorClass = UnitClass(
-    name='Warrior',
+    name='Воин',
     max_health=60.0,
     max_stamina=30.0,
     attack=0.8,
@@ -24,7 +24,7 @@ WarriorClass = UnitClass(
 )
 
 ThiefClass = UnitClass(
-    name='Thief',
+    name='Вор',
     max_health=50.0,
     max_stamina=25.0,
     attack=1.5,
