@@ -29,7 +29,7 @@ class BaseUnit(ABC):
     def equip_armor(self, armor: Armor):
         self.armor = armor
 
-    def _count_damage(self, target: BaseUnit):
+    def _count_damage(self, target):
         damage = self.weapon.damage * self.unit_class.attack
         self.stamina -= self.weapon.stamina_per_hit
 
@@ -44,7 +44,7 @@ class BaseUnit(ABC):
     def damage(self, damage: float):
         self.hp -= damage
 
-    def use_skill(self, target: BaseUnit):
+    def use_skill(self, target):
         if self.is_skill_used:
             return 'Навык уже использован.'
         result = self.unit_class.skill.use(self, target)
@@ -52,7 +52,7 @@ class BaseUnit(ABC):
         return result
 
     @abstractmethod
-    def hit(self, target: BaseUnit):
+    def hit(self, target):
         pass
 
 

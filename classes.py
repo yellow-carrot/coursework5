@@ -34,6 +34,6 @@ ThiefClass = UnitClass(
 )
 
 unit_classes = {
-    WarriorClass: WarriorClass,
+    WarriorClass.name: WarriorClass,
     ThiefClass.name: ThiefClass
 }

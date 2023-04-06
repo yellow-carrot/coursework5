@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from unit import BaseUnit
+# from unit import BaseUnit
 
 
 class Skill(ABC):
@@ -29,7 +29,7 @@ class Skill(ABC):
     def _is_stamina_enough(self):
         return self.user.stamina >= self.stamina
 
-    def use(self, user: BaseUnit, target: BaseUnit) -> str:
+    def use(self, user, target) -> str:
         self.user = user
         self.target = target
         if self._is_stamina_enough:
