@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from skills import Skill, FuryKick, PowerfulShot
+from skills import Skill, FuryKick, PowerfulShot, HolyHeal
 
 
 @dataclass
@@ -33,7 +33,18 @@ ThiefClass = UnitClass(
     skill=PowerfulShot()
 )
 
+HealerClass = UnitClass(
+    name='Лекарь',
+    max_health=100.0,
+    max_stamina=50.0,
+    attack=0.5,
+    stamina=0.5,
+    armor=2.0,
+    skill=HolyHeal()
+)
+
 unit_classes = {
     WarriorClass.name: WarriorClass,
-    ThiefClass.name: ThiefClass
+    ThiefClass.name: ThiefClass,
+    HealerClass.name: HealerClass
 }

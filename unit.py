@@ -10,17 +10,17 @@ class BaseUnit(ABC):
         self.name = name
         self.unit_class = unit_class
         self.hp = unit_class.max_health
-        self.stamina = unit_class.stamina
+        self.stamina = unit_class.max_stamina
         self.weapon = None
         self.armor = None
         self.is_skill_used = False
 
     @property
-    def hp(self):
+    def hp_points(self):
         return round(self.hp, 1)
 
     @property
-    def stamina(self):
+    def stamina_points(self):
         return round(self.stamina, 1)
 
     def equip_weapon(self, weapon: Weapon):

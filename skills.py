@@ -1,4 +1,6 @@
 from abc import ABC, abstractmethod
+
+
 # from unit import BaseUnit
 
 
@@ -60,3 +62,15 @@ class PowerfulShot(Skill):
         self.target.hp -= self.damage
 
         return f'{self.user.name} использует {self.name} и наносит {self.damage} урона сопернику.'
+
+
+class HolyHeal(Skill):
+    name = 'Лечебное заклинание'
+    damage = 50.0
+    stamina = 15.0
+
+    def skill_effect(self):
+        self.user.stamina -= self.stamina
+        self.user.hp += self.damage
+
+        return f'{self.user.name} использует {self.name} и излечивает {self.damage} здоровья.'
