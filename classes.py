@@ -17,9 +17,9 @@ WarriorClass = UnitClass(
     name='Воин',
     max_health=60.0,
     max_stamina=30.0,
-    attack=0.8,
+    attack=1.2,
     stamina=0.9,
-    armor=1.2,
+    armor=1.1,
     skill=FuryKick()
 )
 
@@ -37,9 +37,9 @@ HealerClass = UnitClass(
     name='Лекарь',
     max_health=100.0,
     max_stamina=50.0,
-    attack=0.5,
-    stamina=0.5,
-    armor=2.0,
+    attack=1.1,
+    stamina=0.7,
+    armor=1.2,
     skill=HolyHeal()
 )
 
